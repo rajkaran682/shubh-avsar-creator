@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#211044"><meta name="description" content="फोटो और नाम से हिंदी शुभकामना पोस्टर और एनिमेटेड रील बनाएँ। त्योहार, जयंती और विशेष अवसर के डिजाइन।">
+<title>शुभ अवसर क्रिएटर | फोटो पोस्टर और वीडियो रील</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="brandmark">✦</div><div><strong>शुभ अवसर क्रिएटर</strong><small>फोटो से पोस्टर • पोस्टर से रील</small></div><button id="installBtn" class="quiet" hidden>ऐप इंस्टॉल</button></header>
+<main>
+<section class="hero"><div class="hero-copy"><span class="eyebrow">आपकी फोटो, आपका संदेश</span><h1>हर खास दिन के लिए<br><em>शानदार शुभकामनाएँ</em></h1><p>नाम और फोटो दें। आकर्षक पोस्टर बनाएँ या उसे एनिमेटेड वीडियो रील में बदलें।</p><div class="hero-pills"><span>✓ बिना AI API</span><span>✓ मोबाइल फ्रेंडली</span><span>✓ फोटो आपके डिवाइस पर</span></div></div><div class="hero-art"><div class="sun">✺</div><div class="hero-card"><span>🌸</span><b>शुभकामनाएँ</b><small>खुशियाँ • प्रेम • समृद्धि</small></div></div></section>
+<div class="ad-slot" id="topAd"><small>विज्ञापन स्थान</small><span>AdSense स्वीकृति के बाद यहाँ विज्ञापन दिख सकते हैं</span></div>
+<section class="workspace">
+<div class="controls panel"><div class="section-heading"><span class="step">01</span><div><h2>अपना डिजाइन बनाएँ</h2><p>सिर्फ जरूरी जानकारी भरें</p></div></div>
+<label class="upload" for="photoInput"><input id="photoInput" type="file" accept="image/*"><span class="upload-icon">＋</span><b>अपनी फोटो चुनें</b><small>JPG, PNG या मोबाइल कैमरा फोटो</small></label>
+<div class="field"><label for="personName">फोटो पर दिखने वाला नाम</label><input id="personName" maxlength="48" placeholder="जैसे: राजकरण कुमार"></div>
+<div class="field"><label for="occasionSelect">अवसर चुनें</label><select id="occasionSelect"><option value="today">आज का विशेष अवसर</option><option value="navratri">नवरात्रि</option><option value="diwali">दीपावली</option><option value="holi">होली</option><option value="ambedkar">डॉ. बी. आर. आंबेडकर जयंती / महापरिनिर्वाण</option><option value="gandhi">महात्मा गांधी</option><option value="savitribai">सावित्रीबाई फुले</option><option value="custom">अपना अवसर लिखें</option></select></div>
+<div class="field" id="customTitleWrap" hidden><label for="customTitle">अवसर / महापुरुष का नाम</label><input id="customTitle" placeholder="अवसर का नाम"></div>
+<div class="field"><label for="wishText">शुभकामना संदेश</label><textarea id="wishText" rows="3" maxlength="220" placeholder="आपका संदेश"></textarea></div>
+<div class="field"><label for="themeSelect">डिजाइन का रंग</label><select id="themeSelect"><option value="gold">रॉयल गोल्ड</option><option value="red">त्योहार लाल</option><option value="blue">शाही नीला</option><option value="green">हरा</option><option value="pink">गुलाबी</option><option value="purple">बैंगनी</option></select></div>
+<div class="field"><label for="frameSelect">फ्रेम स्टाइल</label><select id="frameSelect"><option value="ornate">प्रीमियम सजावटी</option><option value="minimal">मिनिमल</option><option value="glow">ग्लो फ्रेम</option><option value="floral">फूलों वाला</option></select></div>
+<div class="field"><label for="fontSize">नाम का आकार</label><input id="fontSize" type="range" min="24" max="52" value="36"></div>
+<div class="field"><label for="animationSelect">रील एनिमेशन</label><select id="animationSelect"><option value="petals">फूलों की बारिश</option><option value="sparkle">चमकते कण</option><option value="rise">धीरे ऊपर आता टेक्स्ट</option><option value="none">सादा एनिमेशन</option></select></div>
+<div class="actions"><button id="makePoster" class="primary">✦ पोस्टर तैयार करें</button><button id="makeVideo" class="secondary">▶ वीडियो रील बनाएँ</button></div><p class="hint" id="status" role="status">पहले फोटो चुनें, फिर डिजाइन तैयार करें।</p>
+</div>
+<div class="preview-column"><div class="preview-head"><div><span class="step">02</span><h2>लाइव प्रीव्यू</h2></div><span class="live-dot">● लाइव</span></div><div class="poster-stage"><canvas id="posterCanvas" width="720" height="1280" aria-label="पोस्टर प्रीव्यू"></canvas><div class="empty-state" id="emptyState"><div>✦</div><b>आपका डिजाइन यहाँ दिखेगा</b><span>फोटो चुनकर पोस्टर तैयार करें</span></div></div><div class="download-grid"><button id="downloadPng" class="download">↓ PNG पोस्टर</button><button id="downloadJpg" class="download">↓ JPG पोस्टर</button><button id="downloadWebm" class="download" disabled>↓ वीडियो रील</button><button id="shareBtn" class="download">↗ शेयर करें</button></div><p class="hint">वीडियो सामान्यतः WebM में सेव होगा; MP4 के लिए अलग कन्वर्ज़न की जरूरत पड़ सकती है।</p><video id="videoPreview" controls playsinline hidden></video></div>
+</section>
+<section class="features"><div><span>🎨</span><h3>खूबसूरत टेम्पलेट</h3><p>रंग, फ्रेम और टाइपोग्राफी के विकल्प।</p></div><div><span>📅</span><h3>अवसर कैलेंडर</h3><p>त्योहार और महापुरुषों के लिए अलग डिजाइन।</p></div><div><span>📱</span><h3>रील फॉर्मेट</h3><p>9:16 वर्टिकल वीडियो सोशल मीडिया के लिए।</p></div></section>
+<section class="earn panel"><div><span class="eyebrow">निर्माता के लिए</span><h2>वेबसाइट से कमाई के तरीके</h2><p>विज्ञापन, प्रीमियम टेम्पलेट और ब्रांडेड डिजाइन। नीचे के विज्ञापन स्लॉट में अपना स्वीकृत AdSense कोड जोड़ा जा सकता है।</p><div class="earn-grid"><div><b>विज्ञापन</b><small>AdSense approval आवश्यक</small></div><div><b>प्रीमियम डिजाइन</b><small>भुगतान गेटवे जोड़ना होगा</small></div><div><b>ब्रांडेड पोस्टर</b><small>स्थानीय दुकानों से ऑर्डर</small></div></div><div class="ad-slot"><small>विज्ञापन स्थान</small><span>अपना स्वीकृत विज्ञापन कोड यहाँ जोड़ें</span></div></section>
+<section class="faq"><h2>जरूरी जानकारी</h2><details><summary>क्या फोटो सर्वर पर अपलोड होती है?</summary><p>इस शुरुआती संस्करण में फोटो ब्राउज़र में प्रोसेस होती है। कोई अकाउंट या फोटो-अपलोड API नहीं है।</p></details><details><summary>क्या वीडियो MP4 में डाउनलोड होगा?</summary><p>ब्राउज़र में उपलब्ध रिकॉर्डिंग सुविधा के अनुसार वीडियो WebM में सेव हो सकता है। सभी मोबाइल ब्राउज़र MP4 रिकॉर्डिंग सपोर्ट नहीं करते।</p></details><details><summary>क्या आज की सभी जयंती अपने आप पता चलेंगी?</summary><p>अभी नमूना अवसर सूची दी गई है। वास्तविक दैनिक कैलेंडर के लिए सत्यापित और नियमित रूप से अपडेट होने वाला डेटासेट जोड़ना होगा। धार्मिक त्योहारों की तिथि स्थानीय पंचांग से बदल सकती है।</p></details></section>
+</main><footer><b>शुभ अवसर क्रिएटर</b><span>© <span id="year"></span> • सम्मानजनक और जिम्मेदार उपयोग करें</span><nav><a href="/privacy.html">गोपनीयता</a><a href="/terms.html">नियम</a></nav></footer>
+<script src="/app.js" defer></script>
+</body></html>
